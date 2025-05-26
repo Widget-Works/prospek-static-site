@@ -1,3 +1,4 @@
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
@@ -132,12 +133,12 @@ h3 {
 .nav-menu {
     display: none;
     position: fixed;
-    top: 80px;
+    top: 72px; /* Changed from 80px to align exactly with header bottom */
     left: 0;
     right: 0;
     background: #FFFFFF;
     flex-direction: column;
-    padding: 24px;
+    padding: 32px 24px; /* Increased vertical padding */
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.3s ease;
@@ -153,8 +154,8 @@ h3 {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 24px; /* Increased gap between menu items */
+    margin-bottom: 32px; /* Increased margin */
     text-align: center;
 }
 
@@ -587,6 +588,10 @@ h3 {
         font-size: 16px;
     }
     
+    .nav {
+        padding: 20px; /* Increased vertical padding for mobile */
+    }
+    
     .nav-center,
     .nav-right {
         display: none;
@@ -598,6 +603,12 @@ h3 {
     
     .nav-toggle {
         display: flex;
+    }
+    
+    /* Make Daftar button not full width on mobile */
+    .nav-menu .btn {
+        max-width: 200px;
+        margin: 0 auto;
     }
     
     .hero {
