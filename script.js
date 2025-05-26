@@ -64,6 +64,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Hide/Show Header on Scroll
+    const header = document.querySelector('.header');
+    let lastScrollTop = 0;
+    let scrollTimeout;
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Clear previous timeout
+        clearTimeout(scrollTimeout);
+        
+        scrollTimeout = setTimeout(() => {
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        }, 10);
+        
+        // Header background blur effect
+        if (scrollTop > 100) {
+            header.style.background = 'rgba(255, 255, 255, 0.98)';
+            header.style.backdropFilter = 'blur(20px)';
+        } else {
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.backdropFilter = 'blur(10px)';
+        }
+    });
+    
     // Scroll-triggered Animations
     const observerOptions = {
         threshold: 0.1,
@@ -73,7 +105,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('aos-animate');
+                const elements = entry.target.querySelectorAll('.animate-element');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('animate');
+                    }, index * 150); // Stagger animation by 150ms
+                });
             }
         });
     }, observerOptions);
@@ -81,34 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe sections for animations
     const animatedSections = document.querySelectorAll('.section');
     animatedSections.forEach(section => {
-        section.setAttribute('data-aos', 'fade-up');
         observer.observe(section);
     });
     
-    // Observe feature cards
-    const featureCards = document.querySelectorAll('.feature-card');
-    featureCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-        observer.observe(card);
-    });
-    
-    // Header Scroll Effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.backdropFilter = 'blur(20px)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    // Observe hero section
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        observer.observe(heroSection);
+    }
     
     // Button Hover Effects
     const buttons = document.querySelectorAll('.btn');
@@ -185,15 +202,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Parallax Effect for Hero Section
-    const heroSection = document.querySelector('.hero');
+    const heroSection2 = document.querySelector('.hero');
     
-    if (heroSection) {
+    if (heroSection2) {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
             const rate = scrolled * -0.5;
             
-            if (scrolled < heroSection.offsetHeight) {
-                heroSection.style.transform = `translateY(${rate}px)`;
+            if (scrolled < heroSection2.offsetHeight) {
+                heroSection2.style.transform = `translateY(${rate}px)`;
             }
         });
     }
