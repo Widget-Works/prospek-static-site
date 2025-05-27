@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -41,7 +40,9 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav-brand">
-                <img src="assets/prospek-logo.svg" alt="Prospek" class="logo">
+                <a href="/" aria-label="Homepage">
+                    <img src="assets/prospek-logo.svg" alt="Prospek" class="logo">
+                </a>
             </div>
             
             <div class="nav-center">
@@ -70,15 +71,15 @@
                         <a href="#faq" class="nav-link">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Login</a>
+                        <a href="https://web.prospek.app/app/" class="nav-link">Login</a>
                     </li>
                 </ul>
-                <a href="register.html" class="btn btn-primary">Daftar</a>
+                <a href="/register" class="btn btn-primary">Daftar</a>
             </div>
             
             <div class="nav-right">
-                <a href="#" class="nav-link">Login</a>
-                <a href="register.html" class="btn btn-primary">Daftar</a>
+                <a href="https://web.prospek.app/app/" class="nav-link">Login</a>
+                <a href="/register" class="btn btn-primary">Daftar</a>
             </div>
             
             <div class="nav-toggle" id="nav-toggle">
@@ -100,28 +101,54 @@
                         Tanpa Ribet
                     </h1>
                     <p class="hero-description animate-element">
-                        Prospek CRM untuk WhatsApp pemasaran otomatis membantu pengusaha pemasaran dengan prospek, mengelola kontak dan menjual produk tanpa ribet dan dengan volume tanpa batas.
+                        Prospek: CRM untuk WhatsApp personal Anda, membantu mengatur percakapan dengan prospek, mengatur pengingat follow-up, dan mengirim pesan broadcast dengan mudah tanpa ribet
                     </p>
                     <div class="hero-buttons animate-element">
                         <a href="register.html" class="btn btn-primary btn-large">Coba Sekarang</a>
                     </div>
                     <div class="hero-features animate-element">
                         <div class="feature-item">
-                            <span class="checkmark">✓</span>
-                            <span>Tidak Perlu Pasang WhatsApp Business API</span>
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                            <span>Tidak Perlu Pakai Whatsapp Business API</span>
                         </div>
                         <div class="feature-item">
-                            <span class="checkmark">✓</span>
-                            <span>Broadcast Follow-Up</span>
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                            <span>Reminder Follow-Up</span>
                         </div>
                         <div class="feature-item">
-                            <span class="checkmark">✓</span>
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
                             <span>Rekam Informasi Pelanggan</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                            <span>Bisa Ajak Tim CS Kamu</span>
                         </div>
                     </div>
                 </div>
                 <div class="hero-image animate-element">
-                    <img src="/lovable-uploads/15b5f09f-1da3-42ca-bbc9-4146f63b8e7c.png" alt="WhatsApp Interface" class="hero-img">
+                    <!-- Decorative SVGs -->
+                    <div class="hero-deco-wrapper">
+                        <img src="assets/deco-three-path.svg" alt="" class="hero-deco hero-deco-one" aria-hidden="true">
+                        <img src="assets/deco-single-path.svg" alt="" class="hero-deco hero-deco-two" aria-hidden="true">
+                    </div>
+                    <!-- End Decorative SVGs -->
+                    <img src="assets/hero.jpg" alt="WhatsApp Interface" class="hero-img">
                 </div>
             </div>
         </div>
@@ -130,57 +157,49 @@
     <!-- Features Section -->
     <section class="features section" id="features">
         <div class="container">
-            <div class="section-header animate-element">
+            <div class="section-header">
                 <h2 class="section-title">Apa Saja Fitur Prospek?</h2>
             </div>
             
             <div class="features-grid">
-                <div class="feature-card animate-element">
-                    <div class="feature-icon">
-                        <div class="icon-circle blue">
-                            <span>📋</span>
-                        </div>
+                <div class="feature-card purple feature-card-span-1">
+                    <div class="feature-content">
+                        <h3>Reminder Follow-Up</h3>
+                        <p>Set pengingat untuk melayani percakapan di waktu yang tepat.</p>
                     </div>
-                    <h3 class="feature-title">Reminder Follow-Up</h3>
-                    <p class="feature-description">
-                        Set pengingat untuk melakukan follow-up pelanggan dengan sistem yang terintegrasi.
-                    </p>
+                    <div class="feature-icon">
+                        <img src="assets/feature-follow-up.png" alt="Reminder Follow Up">
+                    </div>
                 </div>
                 
-                <div class="feature-card animate-element">
-                    <div class="feature-icon">
-                        <div class="icon-circle blue">
-                            <span>📊</span>
-                        </div>
+                <div class="feature-card blue feature-card-span-2">
+                    <div class="feature-content">
+                        <h3>Rekam Informasi Pelanggan Dengan Lengkap</h3>
+                        <p>Lihat informasi pelanggan secara menyeluruh dalam satu tampilan pencatatan yang Anda perlukan untuk bisnis Anda.</p>
                     </div>
-                    <h3 class="feature-title">Rekam Informasi Pelanggan Dengan Lengkap</h3>
-                    <p class="feature-description">
-                        Simpan data pelanggan secara lengkap dengan sistem pengelolaan data yang canggih dan mudah diakses.
-                    </p>
+                    <div class="feature-icon">
+                        <img src="assets/feature-custom-attribute.png" alt="Rekam Informasi Pelanggan">
+                    </div>
                 </div>
                 
-                <div class="feature-card animate-element">
-                    <div class="feature-icon">
-                        <div class="icon-circle blue">
-                            <span>👥</span>
-                        </div>
+                <div class="feature-card blue feature-card-span-2">
+                    <div class="feature-content">
+                        <h3>Kolaborasi dengan Tim Anda</h3>
+                        <p>Ajak tim Anda untuk membalas pesan pelanggan bersama di Prospek. Tugaskan percakapan ke tim dan pantau performa agent Anda.</p>
                     </div>
-                    <h3 class="feature-title">Kolaborasi dengan Tim Anda</h3>
-                    <p class="feature-description">
-                        Bekerja sama dengan tim penjualan Anda dalam satu platform terpadu untuk hasil maksimal.
-                    </p>
+                    <div class="feature-icon">
+                        <img src="assets/feature-collaborate.png" alt="Kolaborasi dengan Tim">
+                    </div>
                 </div>
                 
-                <div class="feature-card animate-element">
-                    <div class="feature-icon">
-                        <div class="icon-circle blue">
-                            <span>💬</span>
-                        </div>
+                <div class="feature-card purple feature-card-span-1">
+                    <div class="feature-content">
+                        <h3>Hubungkan dengan WhatsApp</h3>
+                        <p>Hubungkan WhatsApp Anda dengan scan kode QR dan secara otomatis WhatsApp akan terhubung dengan Prospek.</p>
                     </div>
-                    <h3 class="feature-title">Hubungkan dengan WhatsApp</h3>
-                    <p class="feature-description">
-                        Integrasikan WhatsApp Anda dengan mudah untuk komunikasi yang lebih efektif dan terpusat.
-                    </p>
+                    <div class="feature-text">
+                        <p>Tidak ada biaya pengiriman per pesan. Tidak akan membatasi pesan yang terkirim.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,36 +211,98 @@
             <div class="section-header animate-element">
                 <h2 class="section-title">CRM Terbaik dengan Harga Terjangkau 🔥</h2>
             </div>
-            
-            <div class="pricing-card animate-element">
-                <div class="pricing-header">
-                    <h3 class="pricing-plan">Starter</h3>
-                    <div class="pricing-amount">
-                        <span class="currency">Rp.</span>
-                        <span class="amount">349rb</span>
-                        <span class="period">/bulan</span>
+
+            <div class="pricing-grid">
+                <div class="pricing-card recommended animate-element">
+                    <div class="pricing-favorite-pill">PALING FAVORIT 🔥</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan">Starter</h3>
+                        <div class="pricing-amount">
+                            <span class="currency">IDR</span>
+                            <span class="amount">349rb</span>
+                            <span class="period">bulan</span>
+                        </div>
+                        <p class="pricing-description">Untuk UMKM yang ingin meningkatkan penjualan dengan cepat</p>
                     </div>
-                    <p class="pricing-description">Untuk individual yang ingin mengembangkan prospektus dengan lebih terorganisir</p>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Unlimited Messages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Unlimited Broadcasts</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Akses untuk 6 Devices Bersamaan*</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-footer">
+                        <a href="register.html" class="btn btn-primary btn-full">Hubungi Kami</a>
+                    </div>
                 </div>
-                
-                <div class="pricing-features">
-                    <div class="feature-item">
-                        <span class="checkmark">✓</span>
-                        <span>1000 kontak Pelanggan</span>
+
+                <div class="pricing-card animate-element">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan">Advanced</h3>
+                        <div class="pricing-amount">
+                            <span class="currency">IDR</span>
+                            <span class="amount"></span>
+                            <span class="period">(Coming Soon)</span>
+                        </div>
+                        <p class="pricing-description">Untuk perusahaan yang ingin mengautomasi berbagai pekerjaan</p>
                     </div>
-                    <div class="feature-item">
-                        <span class="checkmark">✓</span>
-                        <span>Live Chat WhatsApp</span>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Unlimited Messages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Unlimited Broadcasts</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Akses untuk 6 Devices Bersamaan*</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>AI Bot</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>10.000 AI Responses</span>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <span class="checkmark">✓</span>
-                        <span>Broadcast dan Follow-up</span>
+                    
+                    <div class="pricing-footer">
+                        <a href="register.html" class="btn btn-secondary btn-full">Hubungi Kami</a>
                     </div>
                 </div>
-                
-                <div class="pricing-footer">
-                    <a href="register.html" class="btn btn-primary btn-full">Hubungi Kami</a>
-                </div>
+            </div>
+
+            <div class="pricing-footnote animate-element">
+                <p>* Jumlah login yang bisa dipakai di waktu yang sama. Prospek tidak membatasi jumlah Agent per akun. Login dari web dan app akan dihitung sebagai login terpisah.</p>
             </div>
         </div>
     </section>
@@ -240,7 +321,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Tidak. Prospek adalah platform yang berbeda dari WhatsApp Business API. Kami menyediakan solusi CRM yang terintegrasi dengan WhatsApp biasa untuk membantu Anda mengelola prospek dan pelanggan dengan lebih efektif.</p>
+                        <p>Tidak, Prospek bisa terhubung aplikasi Whatsapp biasa kamu. Tidak perlu ganti nomor, tidak perlu setup yang ribet, tinggal scan QR dan aplikasi Prospek siap digunakan!<br><br>Oh ya, aplikasi Whatsapp mu pun tetap bisa dipakai barengan dengan Prospek loh :grin:</p>
                     </div>
                 </div>
                 
@@ -250,7 +331,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Tidak ada biaya tambahan untuk mengirim pesan atau broadcast melalui platform kami. Semua fitur sudah termasuk dalam paket berlangganan bulanan.</p>
+                        <p>Tidak ada biaya tambahan untuk kirim pesan. Cukup langganan paket Prospek dan kamu bisa balas dan kelola penjualan mu tanpa worry :wink:</p>
                     </div>
                 </div>
                 
@@ -260,7 +341,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Ya, kami menyediakan free trial selama 14 hari untuk Anda mencoba semua fitur yang tersedia tanpa perlu commitment.</p>
+                        <p>Tidak, Prospek adalah layanan berbayar untuk memastikan kami bisa memberikan pengalaman terbaik dan dukungan penuh bagi pelanggan kami.</p>
                     </div>
                 </div>
             </div>
@@ -272,31 +353,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="assets/prospek-logo-white.svg" alt="Prospek" class="footer-logo">
+                    <a href="/" aria-label="Homepage">
+                        <img src="assets/prospek-logo-white.svg" alt="Prospek" class="footer-logo">
+                    </a>
                     <p class="footer-description">
-                        Prospek adalah platform manajemen prospek WhatsApp yang membantu pengusaha mengelola penjualan dengan lebih efektif dan terorganisir.
+                        Prospek: Aplikasi untuk mengelola percakapan WhatsApp, pengingat follow-up, dan mengirim broadcast dengan mudah tanpa ribet.
                     </p>
                     <div class="footer-social">
-                        <a href="#" class="social-link">📧</a>
-                        <a href="#" class="social-link">📱</a>
-                        <a href="#" class="social-link">🌐</a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                        </a>
                     </div>
                 </div>
                 
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4 class="footer-header">Contact</h4>
-                        <p class="footer-body">+62 812-3456-7890 (WhatsApp)</p>
-                        <p class="footer-body">support@prospek.app</p>
+                        <p class="footer-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone footer-contact-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            +62 877‑7763‑5515‬ (Whatsapp)
+                        </p>
+                        <p class="footer-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail footer-contact-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            contact@prospek.app
+                        </p>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024. All rights reserved by <strong>Widget Wirejs</strong></p>
+                <p>Copyright © 2024. All right reserved to <strong>Widget Works</strong></p>
                 <div class="footer-legal">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-of-service.html">Terms & Conditions</a>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms-of-service.html">Terms & Conditions</a>
                 </div>
             </div>
         </div>
