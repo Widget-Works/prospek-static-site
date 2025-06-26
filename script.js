@@ -400,9 +400,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         updateButtonUI();
                         formServerMessage.textContent = responseData?.message || 'Pendaftaran berhasil!';
                         formServerMessage.classList.add('success');
-                        setTimeout(() => {
-                            window.location.href = "/thank-you"; // Make sure thank-you.html exists
-                        }, 2000);
+                        //setTimeout(() => {
+                        //    window.location.href = "/thank-you"; // Make sure thank-you.html exists
+                        //}, 2000);
                     } else {
                         formState.buttonState = "Error";
                         updateButtonUI();
